@@ -1,0 +1,60 @@
+// =============================================================================
+// _grid.scss : Grids Views
+// MIT License
+// =============================================================================
+
+// =============================================================================
+// _grid.scss settings
+// =============================================================================
+
+.area-grid {
+  @include desktop {
+    display: grid;
+    grid-template-areas: none;
+    grid-template: 50px auto / repeat(10, 1fr);
+    gap: 0;
+  }
+  @include desktop-max {
+    display: grid;
+    grid-template-areas: none;
+    grid-template: 45px 30px auto / 1fr;
+    gap: 0;
+  }
+}
+
+#root {
+  @extend .area-grid;
+  max-height: 100vh;
+  overflow: hidden;
+  @include desktop-max {
+    background: $color-background;
+  }
+}
+header {
+  padding: $spacers-m $container-padding-x;
+  @include desktop {
+    grid-area: 1 / 1 / 2 / 11;
+  }
+  @include desktop-max {
+    grid-area: 1 / 1 / 2 / 1;
+  }
+}
+nav {
+  @include desktop {
+    padding: $spacers-container-l $container-padding-x;
+    grid-area: 2 / 1 / 2 / 2;
+  }
+  @include desktop-max {
+    padding: 5px $container-padding-x;
+    grid-area: 2 / 1 / 3 / 1;
+  }
+}
+main {
+  @include desktop {
+  grid-area: 2 / 2 / 2 / 11;
+  }
+  @include desktop-max {
+    grid-area: 3 / 1 / 4 / 1;
+  }
+}
+

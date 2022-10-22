@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "spotify";
 
+import styles from './Topbar.module.scss'
+
 export const Topbar = () => {
     const dispatch = useDispatch()
     const { displayName, avatarURL } = useSelector((state) => state.spotifyProfile)
@@ -17,14 +19,10 @@ export const Topbar = () => {
     }, [dispatch])
 
     return (
-        <div style={{ background: 'red' }}>
-            <p>Topbar</p>
-            <header>
-                <div ><p>logo</p></div>
-                <div ><Search /></div>
-                <div ><User name={displayName} avatarURL={avatarURL} /></div>
-
-            </header>
-        </div>
+        <header className={styles.topbar}>
+            <img width="200" height="45" className={styles.logo}  src="./assets/logo.png" alt="" />
+            <Search />
+            <User name={displayName} avatarURL={avatarURL} />
+        </header>
     )
 }

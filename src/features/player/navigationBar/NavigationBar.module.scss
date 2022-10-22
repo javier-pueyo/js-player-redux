@@ -1,0 +1,26 @@
+@import '/src/index.scss';
+
+.activeClass {
+    font-weight: bold;
+}
+
+.navigationBar {
+    @include desktop-max {
+        border-top: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+    }
+    & .title {
+        @include desktop-max {
+            display: none;
+        }
+    }
+    & .menu {
+        @include desktop-max {
+            @include base-flex(flex, space-between, stretch);
+            position: relative;
+            & a {
+                color: $color-white;
+            }
+        }
+    }
+}

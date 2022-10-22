@@ -8,5 +8,9 @@ export const Search = () => {
         // TODO: use search api
     }, [dispatch])
 
-    return <div></div>
+    return (
+        <div>
+            
+        </div>
+    )
 }

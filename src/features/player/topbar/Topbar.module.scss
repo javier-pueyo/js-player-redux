@@ -1,0 +1,10 @@
+@import '/src/index.scss';
+
+.topbar {
+    @include base-flex(flex, space-between, stretch);    
+}
+.logo {
+    width: auto;
+    height: 100%;
+}
+

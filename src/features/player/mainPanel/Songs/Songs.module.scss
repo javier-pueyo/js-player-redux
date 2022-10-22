@@ -1,0 +1,49 @@
+@import '/src/index.scss';
+
+.img {
+    width: 300px;
+    height: 300px;
+}
+
+.albums {
+    background: $color-background;
+    border-radius: $spacers-l;
+    overflow-y: scroll;
+    padding: $spacers-container-l $container-padding-x;
+    height: 100%;
+
+    .name {
+        @include base-flex(flex, space-around, center);
+        height: 50px;
+        font-weight: $font-weight-bold;
+
+        @include desktop-max {
+            display: none;
+        }
+
+        & li {
+            border-top: 1px solid $color-primary;
+            border-bottom: 1px solid $color-primary;
+            width: 100%;
+            text-align: center;
+            padding: $spacers-l;
+        }
+    }
+    
+    & .track {
+        @include base-flex(flex, space-around, center);
+        @include desktop {
+            height: 50px;
+            text-align: center;
+        }
+        @include desktop-max {
+            flex-direction: column;
+            margin-top: $spacers-l;
+            margin-bottom: $spacers-l;
+        }
+
+        & p {
+            width: 100%;
+        }
+    }
+}

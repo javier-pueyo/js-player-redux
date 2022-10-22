@@ -1,0 +1,28 @@
+@import '/src/index.scss';
+
+.controlplayer {
+    padding: $spacers-m;
+    @include base-flex(flex, stretch, stretch);
+    gap: $spacers-xl;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+
+    & .timeline {
+        border-radius: 15px;
+        height: 5px;
+        background: $color-white;
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    & button img {
+        width: auto;
+        height: 100%;
+    }
+
+    & .time {
+        align-self: center;
+    }
+}

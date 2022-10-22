@@ -1,0 +1,19 @@
+@import '/src/index.scss';
+
+
+.albums {
+    background: $color-background;
+    border-radius: $spacers-l;
+    overflow-y: scroll;
+    padding: $spacers-container-l $container-padding-x;
+    height: 100%;
+
+    & .item {
+        @extend .col-quarter;
+        gap: $spacers-m; 
+    }
+
+    & p {
+        width: 100%;
+    }
+}

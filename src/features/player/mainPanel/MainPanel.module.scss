@@ -1,0 +1,13 @@
+@import '/src/index.scss';
+
+.mainpanel {
+    flex-direction: column;
+    display: flex;
+    align-content: space-between;
+    @include desktop {
+        height: calc(100vh - 50px);
+    }
+    @include desktop-max {
+        height: calc(100vh - 75px);
+    }
+}
