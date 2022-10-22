@@ -102,7 +102,7 @@ Llamadas a api y reducers para almacenar los datos de esas llamadas
 ## Información complementaria
 
 - Por simplicidad, no esta implementado el refresh de los tokens de la sesion de spotify. Si el token expira, se mostrara el modal, se generan nuevos tokens y se hara un refresh automaticamente sin que haga falta hacer login manualmente.
-- El modo estricto de React 18 esta desactivado. Se pueden reactivar si lo desean en el archivo index.js, quitando los comentario. Solo tengan en cuenta que el comportamiento no es el mismo que
+- El modo estricto de React 18 esta desactivado. Se pueden reactivar si lo desean en el archivo index.js, quitando los comentario. Solo tengan en cuenta que van a tener un doble renderizado de todo, y en muchos casos el doble de logs.
 - La sintaxis de los modulos css es el estandar de css, solo que estan acotados al componente que los importa. Pueden ver ejemplo de como se importa desde el componente **Player.jsx** y su correspondiente **Player.module.css**
   - Si por alguna razon se bloquean con esto, pueden usar el index.css en **/src**
 
