@@ -16,6 +16,7 @@
         @include base-flex(flex, space-around, center);
         height: 50px;
         font-weight: $font-weight-bold;
+        margin-bottom: $spacers-l;
 
         @include desktop-max {
             display: none;
@@ -32,6 +33,10 @@
     
     & .track {
         @include base-flex(flex, space-around, center);
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
         @include desktop {
             height: 50px;
             text-align: center;
