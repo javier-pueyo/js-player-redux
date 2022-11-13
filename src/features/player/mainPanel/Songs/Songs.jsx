@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMySongs } from "spotify";
+import useControllerAudio from "hooks/useControllerAudio.hook";
 import React from 'react';
 
 import styles from "./Songs.module.scss";
@@ -16,6 +17,7 @@ export const Songs = () => {
     const refSong = useRef([]);
     const [currentPlaySong, setcurrentPlaySong] = useState(null);
     const { songs } = useSelector((state) => state.spotifyMySongs);
+    const controllerPlayer = useControllerAudio();
     const audioElement = new Audio();
     console.log('paused', audioElement.paused);
     console.log(songs);
@@ -33,7 +35,7 @@ export const Songs = () => {
     }
     
 
-    const playSong = (track = null, newrefSong = null) => {
+/*     const playSong = (track = null, newrefSong = null) => {
         console.log('track', track);
         setcurrentPlaySong(newrefSong);
         audioElement.src = track.trackUrl;
@@ -42,7 +44,7 @@ export const Songs = () => {
         console.log('paused', audioElement.paused);
         // console.log('prueba', searchNextSong(dataId));
         console.log('reproducir', newrefSong.current);
-    }
+    } */
 
 /*     audioElement.addEventListener('ended', (event) => {
         const dataId = refSong.current[currentPlaySong].current.attributes.data_id.value;
@@ -67,7 +69,7 @@ export const Songs = () => {
             <ul>
                 {songs.map((track, i) => {
                     return(
-                        <li className={styles.track} key={track.id} onClick={() => {playSong(track, i)}} ref={refSong.current[i]} data_id={track.id}>
+                        <li className={styles.track} key={track.id} onClick={() => {dispatch(controllerPlayer.setPlayAudio(track))}} ref={refSong.current[i]} data_id={track.id}>
                             <p>{track.trackName}</p>
                             <p>{track.artists}</p>
                             <p>{track.albumName}</p>
