@@ -9,9 +9,9 @@ const SPOTIFY_URL = 'https://accounts.spotify.com'
 */
 
 //production
-const CLIENT_ID = '5d4fb8c1ce75440eb9c0d7ad61790a4a';
-const CLIENT_SECRET = '2a1b4e5bc365420e9251e2503775709e';
-const REDIRECT_URI = 'https://js-player-redux.netlify.app/callback';
+const CLIENT_ID = '0f4a363667ae4c5698d81900b79243b1';
+const CLIENT_SECRET = '584f6c65d8234dcab80c724a5c06f5f6';
+const REDIRECT_URI = 'http://localhost:3000/callback';
 const SPOTIFY_URL = 'https://accounts.spotify.com'
 
 
