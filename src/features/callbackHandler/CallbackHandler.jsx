@@ -9,7 +9,8 @@ let apiFetched = false
 
 export const CallbackHandler = () => {
     const [searchParams] = useSearchParams();
-    const code = searchParams.get('code')
+    const code = searchParams.get('code');
+    console.log(code);
 
     const getTokens = async (code) => {
         if (apiFetched) {
