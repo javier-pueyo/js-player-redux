@@ -25,6 +25,7 @@
 #root {
   @extend .area-grid;
   max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   @include desktop-max {
     background: $color-background;

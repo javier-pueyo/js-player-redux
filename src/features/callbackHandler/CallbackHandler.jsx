@@ -41,5 +41,5 @@ export const CallbackHandler = () => {
     }, [code])
 
 
-    return <div>Callback</div>
+    return <div></div>
 }

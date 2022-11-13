@@ -12,5 +12,5 @@ export const Login = () => {
     }, [status, dispatch])
 
 
-    return <div>login</div>
+    return <div></div>
 }
