@@ -19,7 +19,7 @@ const App = () => {
   const loggedIn = useSelector((state) => state.spotifySession.status === 'logged');
   console.log('location', loggedIn);
 
-/*   useEffect(() => {
+  useEffect(() => {
     // Si estamos logueados y no estamos en player. redireccionamos
     if (loggedIn && !location.pathname.includes('/player')) {
       navigate('/player');
@@ -30,7 +30,7 @@ const App = () => {
     if (!loggedIn && location.pathname !== '/callback' && location.pathname !== '/login') {
       navigate('/login');
     }
-  }, [loggedIn, location.pathname, navigate]); */
+  }, [loggedIn, location.pathname, navigate]);
 
   return (
     <Routes>
