@@ -1,5 +1,5 @@
 import { updateIsPlay, updateSong, updateRef } from '../redux/controllerAudio.slice'
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import {useContext, useState} from 'react';
 import { AudioContext } from 'context/Context';
 
@@ -8,11 +8,10 @@ const useControllerAudio = () => {
     const { trackId } = useSelector((state) => state.controllerAudio);
     const [audio, setAudio] = useState(null);
     const audioContext = useContext(AudioContext);
-    // const dispatch = useDispatch();
     
-    const getSrcAudio = () => {
+/*     const getSrcAudio = () => {
         return audioContext.audio ? audioContext.audio.current.attributes.src.value : '';
-    }
+    } */
     const getAudio = () => {
         return audioContext.audio ? audioContext.audio.current : '';
     }

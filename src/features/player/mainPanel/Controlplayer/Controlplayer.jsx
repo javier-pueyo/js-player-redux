@@ -10,7 +10,7 @@ import playImg from '../../../../assets/play.png';
 import styles from './Controlplayer.module.scss'
 
 function Controlplayer() {
-  const { trackUrl, trackId, isPlay } = useSelector((state) => state.controllerAudio);
+  const { trackUrl, isPlay } = useSelector((state) => state.controllerAudio);
   const refAudio = useRef(null);
   const dispatch = useDispatch();
   const controllerPlayer = useControllerAudio();
