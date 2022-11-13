@@ -18,7 +18,7 @@ export const MainPanel = () => {
                 <Route path="playlists" element={<Playlist />} />
                 <Route path="songs" element={<Songs />} />
             </Routes>
-            <Controlplayer />
+            {/* <Controlplayer /> */}
         </main>
     )
 }

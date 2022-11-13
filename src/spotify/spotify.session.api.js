@@ -1,7 +1,7 @@
 import { authorizationRequested, hasBeenAuthorized } from "./spotify.session.slice";
 
-const CLIENT_ID = '0a6de255b0bc400b85c9b9276eb2a360';
-const CLIENT_SECRET = '7563d7d8efb34d5bbea469921b02d0f7';
+const CLIENT_ID = '0f4a363667ae4c5698d81900b79243b1';
+const CLIENT_SECRET = '584f6c65d8234dcab80c724a5c06f5f6';
 const REDIRECT_URI = 'http://localhost:3000/callback';
 const SPOTIFY_URL = 'https://accounts.spotify.com'
 
