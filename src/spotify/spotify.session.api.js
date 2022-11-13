@@ -25,7 +25,7 @@ const login = () => {
     const top = (window.screen.height / 2) - (height / 2);
 
     const url = `${SPOTIFY_URL}/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${encodeURIComponent(scopes.join(' '))}&response_type=code`;
-
+    console.log(url);
 
     window.open(url,
         'Spotify',
@@ -66,6 +66,7 @@ export const requestAccesToken = async (code) => {
                 redirect_uri: REDIRECT_URI
             }),
         })
+        console.log('response-requestAccesToken', response);
         if (response.ok) {
             return await response.json()
         } else {

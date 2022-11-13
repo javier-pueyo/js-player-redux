@@ -10,9 +10,10 @@ let apiFetched = false
 export const CallbackHandler = () => {
     const [searchParams] = useSearchParams();
     const code = searchParams.get('code');
-    console.log(code);
+    console.log('codeStart', code);
 
     const getTokens = async (code) => {
+        console.log('codeProcess', code);
         if (apiFetched) {
             return
         }
@@ -20,14 +21,17 @@ export const CallbackHandler = () => {
         apiFetched = true
         try {
             const response = await requestAccesToken(code)
+            console.log('response', response);
             if (response.access_token && response.refresh_token) {
                 setTokens(response.access_token, response.refresh_token)
                 window.opener.location.reload()
                 window.close()
             } else {
+                console.log('response-notoken', response);
                 throw response
             }
         } catch (error) {
+            console.log('response-error', error);
             console.error(error);
         }
     }

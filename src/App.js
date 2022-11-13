@@ -13,8 +13,10 @@ const App = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  console.log('location', location);
 
   const loggedIn = useSelector((state) => state.spotifySession.status === 'logged');
+  console.log('location', loggedIn);
 
   useEffect(() => {
     // Si estamos logueados y no estamos en player. redireccionamos
