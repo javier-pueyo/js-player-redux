@@ -2,7 +2,7 @@ import { authorizationRequested, hasBeenAuthorized } from "./spotify.session.sli
 
 const CLIENT_ID = '0f4a363667ae4c5698d81900b79243b1';
 const CLIENT_SECRET = '584f6c65d8234dcab80c724a5c06f5f6';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+const REDIRECT_URI = 'https://js-player-redux.netlify.app/callback';
 const SPOTIFY_URL = 'https://accounts.spotify.com'
 
 const scopes = [
