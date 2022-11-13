@@ -1,9 +1,19 @@
 import { authorizationRequested, hasBeenAuthorized } from "./spotify.session.slice";
 
+/*
+//deployed
 const CLIENT_ID = '5d4fb8c1ce75440eb9c0d7ad61790a4a';
 const CLIENT_SECRET = '2a1b4e5bc365420e9251e2503775709e';
 const REDIRECT_URI = 'https://js-player-redux.netlify.app/callback';
 const SPOTIFY_URL = 'https://accounts.spotify.com'
+*/
+
+//production
+const CLIENT_ID = '5d4fb8c1ce75440eb9c0d7ad61790a4a';
+const CLIENT_SECRET = '2a1b4e5bc365420e9251e2503775709e';
+const REDIRECT_URI = 'https://js-player-redux.netlify.app/callback';
+const SPOTIFY_URL = 'https://accounts.spotify.com'
+
 
 const scopes = [
     'playlist-read-private',

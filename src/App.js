@@ -14,6 +14,7 @@ const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
   console.log('location', location);
+  console.log('location.pathname', location.pathname);
 
   const loggedIn = useSelector((state) => state.spotifySession.status === 'logged');
   console.log('location', loggedIn);
