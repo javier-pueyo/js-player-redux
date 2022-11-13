@@ -11,14 +11,12 @@ export const Songs = () => {
     const refSong = useRef([]);
     const { songs } = useSelector((state) => state.spotifyMySongs);
     const controllerPlayer = useControllerAudio();
-    const audioElement = new Audio();
-    console.log('paused', audioElement.paused);
-    console.log(songs);
 
     useEffect(() => {
-        dispatch(getMySongs())
+        dispatch(getMySongs());
         refSong.current = songs.map((element, i) => refSong.current[i] ?? React.createRef());
-    }, [dispatch, songs])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <div className={styles.songs}>

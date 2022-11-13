@@ -6,6 +6,8 @@ import {useContext} from 'react';
 import {AudioContext} from '../../../../context/Context'
 import pausaImg from '../../../../assets/pausa.png';
 import playImg from '../../../../assets/play.png';
+import anteriorImg from '../../../../assets/anterior.png';
+import siguienteImg from '../../../../assets/siguiente.png';
 
 import styles from './Controlplayer.module.scss'
 
@@ -54,11 +56,11 @@ function Controlplayer() {
   }
   
   return (
-    <div className={styles.controlplayer}>
+      <div className={styles.controlplayer}>
       <audio ref={refAudio} src={trackUrl}></audio>
-      <button className={styles.previous}><img src="./assets/anterior.png" alt="" onClick={() => {dispatch(controllerPlayer.setPreviewAudio())}}/></button>
+      <button className={styles.previous}><img src={anteriorImg} alt="" onClick={() => {dispatch(controllerPlayer.setPreviewAudio())}}/></button>
       <button className={styles.play}><img src={isPlay ? pausaImg : playImg} alt="" onClick={tooglePlay}/></button>
-      <button className={styles.next}><img src="./assets/siguiente.png" alt="" onClick={() => {dispatch(controllerPlayer.setNextAudio())}}/></button>
+      <button className={styles.next}><img src={siguienteImg} alt="" onClick={() => {dispatch(controllerPlayer.setNextAudio())}}/></button>
     	<div id="timeline" className={styles.timeline}>
 		    <div id="playhead" className={styles.playhead}></div>
 	    </div>
