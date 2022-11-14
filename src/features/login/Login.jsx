@@ -12,5 +12,11 @@ export const Login = () => {
     }, [status, dispatch])
 
 
-    return <div></div>
+    return (
+        <div style={{width: 100 + 'vw', margin: 15 + 'px'}}>
+            <p><b>Production Login User:</b></p>
+            <p>email: pueyo.mir@gmail.com</p>
+            <p>pass: pueyomir92</p>
+        </div>
+    )
 }
